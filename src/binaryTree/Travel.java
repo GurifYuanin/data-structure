@@ -6,7 +6,7 @@ public class Travel {
 	// ÏÈÐò±éÀú => DFS
 	static void preTravel(Node root) {
 		if (root != null) {
-			System.out.print(root.data);
+			System.out.println(root.data);
 			preTravel(root.left);
 			preTravel(root.right);
 		}
@@ -17,7 +17,7 @@ public class Travel {
 		if (root != null) {
 			postTravel(root.left);
 			postTravel(root.right);
-			System.out.print(root.data);
+			System.out.println(root.data);
 		}
 	}
 	
@@ -35,7 +35,7 @@ public class Travel {
 				if (tmp.right != null) {
 					list.add(tmp.right);
 				}
-				System.out.print(tmp.data);
+				System.out.println(tmp.data);
 			}
 		}
 	}

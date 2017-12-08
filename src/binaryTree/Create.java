@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class Create {
 	static Scanner sca = new Scanner(System.in);
+	// 先序创建二叉树
 	static Node preCreate() {
 		// 以“-1”作为null节点先序创建
 		int data = sca.nextInt();
@@ -16,9 +17,9 @@ public class Create {
 		}
 		return root;
 	}
-
+	
+	// 先序+中序遍历创建任意二叉树
 	static Node preInoCreate(Node root, int[] preorder, int[] inorder) {
-		// 先序+中序遍历创建任意二叉树
 		if (preorder.length == 0 || inorder.length == 0) {
 			return null;
 		}
