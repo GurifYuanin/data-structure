@@ -18,14 +18,14 @@ public class Create {
 		return root;
 	}
 	
-	// 先序+中序遍历创建任意二叉树
-	static Node preInoCreate(Node root, int[] preorder, int[] inorder) {
+	// 先序 + 中序遍历创建任意二叉树
+	static Node preInoCreate(int[] preorder, int[] inorder) {
 		if (preorder.length == 0 || inorder.length == 0) {
 			return null;
 		}
 		// 把先序遍历的第一个作为数据创建节点
 		int data = preorder[0];
-		root = new Node(data);
+		Node root = new Node(data);
 		// 找出中序遍历的下标
 		int index = 0;
 		for (int i = 0; i < inorder.length; i++) {
@@ -39,8 +39,8 @@ public class Create {
 		int[] rightPre = Arrays.copyOfRange(preorder, index + 1, preorder.length);
 		int[] leftIno = Arrays.copyOfRange(inorder, 0, index);
 		int[] rightIno = Arrays.copyOfRange(inorder, index + 1, inorder.length);
-		root.left = preInoCreate(root.left, leftPre, leftIno);
-		root.right = preInoCreate(root.right, rightPre, rightIno);
+		root.left = preInoCreate(leftPre, leftIno);
+		root.right = preInoCreate(rightPre, rightIno);
 		return root;
 	}
 }

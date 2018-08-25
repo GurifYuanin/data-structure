@@ -53,7 +53,7 @@ public class UF {
 		int id1 = getSetIndex(index1);
 		int id2 = getSetIndex(index2);
 		if (id1 != id2) {
-			set[index1].id = id2;
+			set[id1].id = id2;
 			count--;
 		}
 	}
