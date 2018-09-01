@@ -3,7 +3,7 @@ package binaryTree;
 import java.util.LinkedList;
 
 public class Travel {
-	// 先序遍历 => DFS
+	// 先序遍历  => DFS
 	static void preTravel(Node root) {
 		if (root != null) {
 			System.out.println(root.data);

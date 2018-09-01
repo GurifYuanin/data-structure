@@ -1,18 +1,17 @@
 package binaryTree;
 
+// 二叉树基本操作
+
 public class Operate {
 	// 计算高度
+	// 叶子节点高度为 0
 	static int getHeight(Node root) {
 		if (root == null) {
 			return 0;
 		}
 		int leftHeight = getHeight(root.left);
 		int rightHeight = getHeight(root.right);
-		if (leftHeight > rightHeight) {
-			return leftHeight + 1;
-		} else {
-			return rightHeight + 1;
-		}
+		return Math.max(leftHeight, rightHeight) + 1;
 	}
 	
 	// 填写深度
